@@ -79,7 +79,7 @@ main figure span{
     transition: .3s ease;
     border: 0.02em solid var(--ln-blue);
     border-radius: var(--border-radius);
-    box-shadow: 0.02em 0.02em 1em var(--ln-blue);
+    box-shadow: 0.2em 0.2em 1em var(--ln-blue);
 }
 
 main figure span img{
@@ -101,9 +101,15 @@ main section{
 
 main section h2{
     font-weight: 500;
+    cursor: pointer;
 }
 
-main section p{
+main section h2:hover{
+    color: var(--cyan);
+}
+
+main section p,
+main section aside small{
     color: var(--tr-white);
 }
 
@@ -133,6 +139,11 @@ main section #profile{
 
 main section #profile strong{
     color: var(--white);
+    cursor: pointer;
+}
+
+main section #profile strong:hover{
+    color: var(--cyan);
 }
 
 main section #profile #avatar{
