@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@100;400;600;700&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --tr-red: hsla(0, 100%, 67%, 0.1);
+    --red: hsla(0, 100%, 67%);
+    --tr-yellow: hsla(39, 100%, 56%, 0.1);
+    --yellow: hsla(39, 100%, 56%);
+    --tr-teal: hsla(166, 100%, 37%, 0.1);
+    --teal: hsla(166, 100%, 37%);
+    --tr-col-blue: hsla(234, 85%, 45%, 0.1);
+    --col-blue: hsla(234, 85%, 45%);
+    --lt-sl-blue: hsl(252, 100%, 67%);
+    --lt-ry-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    --pl-blue: hsl(221, 100%, 96%);
+    --purple: hsl(241, 100%, 89%);
+    --gr-blue: hsl(224, 30%, 27%);
+    --lt-lavendar: hsl(241, 100%, 89%);
+    --font: 'Hanken Grotesk', sans-serif;
+    --text: 1.1em;
+    --large-text: 3em;
+    --width: 100%;
+    --height: 100vh;
+    --radius: 50%;
+    --border-radius: 1em;
+    --small-radius: .5em;
+}
+
+html, body{
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font) !important;
+}
+
+main{
+    position: relative;
+    width: (var(--width) * 0.4);
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0.2em 0.2em 3em var(--purple);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 1000px) {
+    main{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 600px) {
+    main{
+        width: 90%;
+        flex-direction: column;
+        border-bottom-left-radius: var(--border-radius);
+    }
+}
+
+main aside{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(
+        170deg,
+        var(--lt-sl-blue),
+        var(--lt-ry-blue)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    padding: 1em;
+    gap: 1em;
+    text-align: center;
+    color: var(--white);
+}
+
+main aside .circle{
+    position: relative;
+    margin: 1em 0;
+    width: 53%;
+    height: calc(var(--height) * 0.2);
+    background: linear-gradient(
+        180deg,
+        var(--violet-blue),
+        var(--persian-blue)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    gap: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    main aside .circle{
+        height: calc(var(--height) * 0.13);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main aside .circle{
+        width: 43%;
+        height: calc(var(--height) * 0.18);
+    }
+}
+
+main aside .circle h1{
+    font-size: var(--large-text);
+}
+
+main aside .text{
+    width: 100%;
+}
+
+main aside p{
+    color: var(--purple);
+    font-weight: 300;
+    font-size: var(--text);
+}
+
+main aside small{
+    color: var(--purple);
+    width: clamp(70%, 10vw, 50%);
+}
+
+main section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1em;
+}
+
+main section div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: flex-start;
+    width: 100%;
+}
+
+h3{
+    color: var(--gr-blue);
+}
+
+main section div figure:nth-child(1){
+    background: var(--tr-red);
+    color: var(--red);
+}
+main section div figure:nth-child(2){
+    background: var(--tr-yellow);
+    color: var(--yellow);
+}
+main section div figure:nth-child(3){
+    background: var(--tr-teal);
+    color: var(--teal);
+}
+main section div figure:nth-child(4){
+    background: var(--tr-col-blue);
+    color: var(--col-blue);
+}
+
+main section div figure{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6em;
+    border-radius: var(--small-radius);
+}
+
+main section div figure span{
+    position: relative;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .1em;
+}
+
+main section div figure figcaption{
+    position: relative;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--gr-blue);
+    font-weight: 700;
+}
+
+main section div figure figcaption span{
+    color: var(--lt-lavendar);
+}
+
+button{
+    width: 100%;
+    border-radius: calc(var(--border-radius)* 2);
+    background: var(--gr-blue);
+    outline: none;
+    border: none;
+    color: var(--white);
+    padding: 1em 0;
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--violet-blue);
+}
