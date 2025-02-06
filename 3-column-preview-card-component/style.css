@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-lexend: "Lexend Deca", serif;
+  --font-shoulders: "Big Shoulders Display", serif;
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --dark-cyan-v: hsl(179, 100%, 13%);
+  --white-t: hsla(0, 0%, 100%, 0.75);
+  --light-gray-v: hsl(0, 0%, 95%);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--light-gray-v);
+  display: flex;
+  overflow-x: hidden; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75em 2.4%;
+  gap: 2em;
+
+  main {
+    width: 100%;
+    max-width: 54em;
+    height: inital;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin: 2em 0 2em 0;
+    overflow: auto;
+    
+    @media screen and (min-width: 600px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      height: max-content;
+      margin: 0 0 12em 0;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      padding: 2em;
+
+      img {
+        width: max-content;
+        height: max-content;
+      }
+
+      h1 {
+        font-family: var(--font-shoulders);
+        font-size: 2em;
+        color: var(--light-gray-v);
+      }
+
+      p {
+        width: inherit;
+        max-width: 85%;
+        font-family: var(--font-lexend);
+        color: var(--white-t);
+        font-size: 0.85em;
+        line-height: 1.8;
+      }
+
+      button {
+        width: max-content;
+        outline: none;
+        resize: none;
+        border: 0.1em solid white;
+        background: white;
+        border-radius: 12em;
+        padding: 0.75em 1.25em;
+        font-size: 1em;
+        margin: 1em 0 0 0;
+        font-family: var(--font-lexend);
+        transition: all 150ms ease-in-out;
+        cursor: pointer;
+        
+        @media screen and (min-width: 600px) {
+          margin: 5em 0 0 0;
+        }
+      }
+
+      &:first-child {
+        background: var(--bright-orange);
+        button {
+          color: var(--bright-orange);
+
+          &:hover {
+            background: transparent;
+            color: white;
+          }
+        }
+      }
+      &:nth-child(2) {
+        background: var(--dark-cyan);
+        button {
+          color: var(--dark-cyan);
+
+          &:hover {
+            background: transparent;
+            color: white;
+          }
+        }
+      }
+      &:last-child {
+        background: var(--dark-cyan-v);
+        button {
+          color: var(--dark-cyan-v);
+
+          &:hover {
+            background: transparent;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .attribution {
+    /* margin: 0 auto; */
+    text-align: center;
+  }
+}

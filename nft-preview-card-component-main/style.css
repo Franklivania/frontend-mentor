@@ -76,7 +76,7 @@ main figure span{
     height: 100%;
     background: var(--tr-cyan);
     display: none;
-    transition: .3s ease;
+    transition: display .3s ease;
     border: 0.02em solid var(--ln-blue);
     border-radius: var(--border-radius);
     box-shadow: 0.2em 0.2em 1em var(--ln-blue);
